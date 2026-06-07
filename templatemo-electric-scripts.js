@@ -209,3 +209,13 @@ https://templatemo.com/tm-596-electric-xtra
                 }
             });
         }, 3000);
+
+// Login button
+function goLogin() {
+    window.location.href = "/webku2/login/";
+}
+
+// Register button
+function goRegister() {
+    window.location.href = "/webku2/register/";
+}
