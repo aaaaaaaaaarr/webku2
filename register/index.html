@@ -1,23 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Minimalist Register Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background:black;color:white;text-align:center;padding-top:100px;">
-    <h1>REGISTER PAGE</h1>
+<body>
 
-    <form>
-        <input type="text" placeholder="Username"><br><br>
-        <input type="email" placeholder="Email"><br><br>
-        <input type="password" placeholder="Password"><br><br>
+    <div class="login-container">
 
-        <button type="submit">Register</button>
-    </form>
+        <div class="login-card">
 
-    <br>
+            <div class="login-header">
+                <div class="logo-icon">⚡</div>
+                <h2>Create Account</h2>
+                <p>Join our community</p>
+            </div>
 
-    <a href="../index.html" style="color:cyan;">
-        Kembali ke Home
-    </a>
+            <form class="login-form" id="registerForm">
+
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            required
+                            autocomplete="username"
+                        >
+                        <label for="username">Username</label>
+                        <span class="input-line"></span>
+                    </div>
+                    <span class="error-message" id="usernameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            autocomplete="email"
+                        >
+                        <label for="email">Email</label>
+                        <span class="input-line"></span>
+                    </div>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-wrapper password-wrapper">
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                            autocomplete="new-password"
+                        >
+
+                        <label for="password">Password</label>
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="passwordToggle"
+                            aria-label="Toggle password visibility"
+                        >
+                            <span class="toggle-icon"></span>
+                        </button>
+
+                        <span class="input-line"></span>
+
+                    </div>
+
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <button type="submit" class="login-btn btn">
+
+                    <span class="btn-text">
+                        Register
+                    </span>
+
+                    <span class="btn-loader"></span>
+
+                    <span class="btn-glow"></span>
+
+                </button>
+
+            </form>
+
+            <div class="divider">
+                <span>or</span>
+            </div>
+
+            <div class="social-login">
+
+                <button
+                    type="button"
+                    class="social-btn google-btn"
+                >
+                    <span class="social-icon google-icon"></span>
+                    <span>Continue with Google</span>
+                </button>
+
+                <button
+                    type="button"
+                    class="social-btn apple-btn"
+                >
+                    <span class="social-icon apple-icon"></span>
+                    <span>Continue with Apple</span>
+                </button>
+
+            </div>
+
+            <div class="signup-link">
+                <p>
+                    Already have an account?
+                    <a href="../login/index.html">
+                        Sign In
+                    </a>
+                </p>
+            </div>
+
+            <div
+                class="success-message"
+                id="successMessage"
+            >
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Account Created!
+                </h3>
+
+                <p>
+                    Redirecting to login page...
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="background-effects">
+
+            <div class="glow-orb glow-orb-1"></div>
+
+            <div class="glow-orb glow-orb-2"></div>
+
+            <div class="glow-orb glow-orb-3"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
