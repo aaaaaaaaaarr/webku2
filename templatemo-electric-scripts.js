@@ -219,3 +219,45 @@ function goLogin() {
 function goRegister() {
     window.location.href = "/webku2/register/";
 }
+
+// Logout
+function logout() {
+    localStorage.removeItem("username");
+    location.reload();
+}
+
+// Cek status login
+document.addEventListener("DOMContentLoaded", () => {
+
+    const userInfo = document.getElementById("userInfo");
+    const authArea = document.getElementById("authArea");
+
+    if (!userInfo || !authArea) return;
+
+    const username = localStorage.getItem("username");
+
+    if (username) {
+
+        userInfo.innerHTML = `Halo, ${username}`;
+
+        authArea.innerHTML = `
+            <button onclick="logout()" class="nav-cta">
+                Logout
+            </button>
+        `;
+
+    } else {
+
+        userInfo.innerHTML = "Belum login";
+
+        authArea.innerHTML = `
+            <button onclick="goLogin()" class="nav-cta">
+                Login
+            </button>
+            <button onclick="goRegister()" class="nav-cta">
+                Register
+            </button>
+        `;
+    }
+
+});
