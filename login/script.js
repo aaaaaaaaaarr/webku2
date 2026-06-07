@@ -64,10 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (data.status === "success") {
 
-                localStorage.setItem(
-                    "username",
-                    data.username
-                );
+                localStorage.setItem("username", data.username);
 
                 showSuccess();
 
